@@ -12,7 +12,6 @@ public class EnemyHP : MonoBehaviour
     private Movement2D movement2D;
     public float MaxHP => maxHP;
     public float CurrentHP => currentHP;
-    public bool IsDead => isDie;
     
     [SerializeField]
     Animator anim;
