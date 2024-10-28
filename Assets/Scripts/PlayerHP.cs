@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHP : MonoBehaviour
 {
     [SerializeField]
-    private float maxHP = 20; //
+    private float maxHP = 20; // 플레이어 체력
     private float currentHP;
     [SerializeField]
     private Image imageScreen; // 적이 플레이어의 체력을 감소시키면 발생하는 화면 UI
@@ -22,7 +22,7 @@ public class PlayerHP : MonoBehaviour
         StopCoroutine("HitAnimation");
         StartCoroutine("HitAnimation");
         if(currentHP <= 0) { // 체력이 0이라면 게임오버
-
+            GameManager.instance.SetGameOver();
         }
     }
     private IEnumerator HitAnimation() {

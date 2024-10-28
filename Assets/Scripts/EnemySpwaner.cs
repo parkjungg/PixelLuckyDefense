@@ -47,7 +47,7 @@ public class EnemySpwaner : MonoBehaviour
             spawnEnemyCount++;
             enemyIndex++;
             if(enemyIndex == currentWave.enemyPrefabs.Length) {
-                 enemyIndex = enemyIndex - 1;   
+                 enemyIndex = enemyIndex - 1;  
             }
 
             yield return new WaitForSeconds(currentWave.spawnTime);

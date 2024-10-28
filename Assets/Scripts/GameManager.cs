@@ -27,6 +27,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     WaveSystem waveSystem;
     public static GameManager instance;
+    [SerializeField]
+    private GameObject gameOverPanel;
+    [SerializeField]
+    private GameObject gameVictoryPanel;
     void Awake() {
         if(instance == null) {
             instance = this;
@@ -39,5 +43,17 @@ public class GameManager : MonoBehaviour
         textDamage.text = "Damage : +" + TowerWeapon.upgradeBonus.ToString();
         textNeedsGold.text = towerManager.upgradeGold.ToString();
         roundText.text = "Round : " + waveSystem.roundNum.ToString();
+    }
+    public void SetGameOver() {
+        Invoke("ShowGameOverPanel", 1f);
+    }
+    public void SetGameVictory() {
+        Invoke("ShowGameVictoryPanel", 1f);
+    }
+    private void ShowGameOverPanel() {
+        gameOverPanel.SetActive(true);
+    }
+    private void ShowGameVictoryPanel() {
+        gameVictoryPanel.SetActive(true);
     }
 }
