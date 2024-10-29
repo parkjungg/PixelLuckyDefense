@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Text roundText;
     [SerializeField]
-    private Text cardName;    
+    private Text cardName;
+    [SerializeField]
+    private Text speedText;    
     
     [Header("# Game Component")]
     [SerializeField]
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     private GameObject gameOverPanel;
     [SerializeField]
     private GameObject gameVictoryPanel;
+    private bool gameSpeedOn = false;
     void Awake() {
         if(instance == null) {
             instance = this;
@@ -55,5 +58,18 @@ public class GameManager : MonoBehaviour
     }
     private void ShowGameVictoryPanel() {
         gameVictoryPanel.SetActive(true);
+    }
+    // 게임 속도 조정 → 최대 2배 조정 가능(토글 형식)
+    public void SetGameSpeed() {
+        if(!gameSpeedOn) {
+            Time.timeScale = 2;
+            gameSpeedOn = true;
+            speedText.text = "x2";
+        }
+        else {
+            Time.timeScale = 1;
+            gameSpeedOn = false;
+            speedText.text = "x1";
+        }        
     }
 }

@@ -16,11 +16,12 @@ public class WaveSystem : MonoBehaviour
             enemySpawner.StartWave(waves[currentWaveIndex]);
             if (currentWaveIndex == 0) {
                 roundNum = 1;
-            } else {
+            }          
+            else {
                 roundNum++;
-            }
+            }            
         }
-    }    
+    }  
 }
 
 [System.Serializable]

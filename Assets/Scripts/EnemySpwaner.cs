@@ -7,6 +7,8 @@ public class EnemySpwaner : MonoBehaviour
     [SerializeField]
     private Transform[] wayPoints; // 현재 스테이지의 이동 경로
     private Wave currentWave; // 현재 웨이브 정보
+    [SerializeField]
+    private WaveSystem waveSystem;
     private int enemyIndex = 0;
     [SerializeField]
     private PlayerHP playerHP;
@@ -54,14 +56,22 @@ public class EnemySpwaner : MonoBehaviour
         }                      
     }
     public void DestroyEnemy(EnemyDestroyType type, Enemy enemy, int gold) {    
-        if(type == EnemyDestroyType.Arrive) {
-            playerHP.TakeDamage(1);
+        if(type == EnemyDestroyType.Arrive) {            
+            if(waveSystem.roundNum == 10 || waveSystem.roundNum == 20) { // 10, 20단계 일때는 보스이므로 처지 못할 시 즉시 패배 
+                playerHP.TakeDamage(20);
+            }
+            else{
+                playerHP.TakeDamage(1);
+            }
         }
         else if(type == EnemyDestroyType.kill) {
             PlayerGold.CurrentGold += gold; // 적의 종류에 따라 사망 시 골드 획득
         }    
         enemyList.Remove(enemy); // 리스트에서 사망하는 적 정보 삭제
         Destroy(enemy.gameObject); // 적 오브젝트 삭제
+        if(enemyList.Count == 0 && waveSystem.roundNum == 20) {
+            GameManager.instance.SetGameVictory(); // 마지막 라운드 클리어시 승리
+        }
     }
     private void SpawnEnemyHPSlider(GameObject enemy) {
         GameObject sliderClone = Instantiate(enemyHPSliderPrefab);
