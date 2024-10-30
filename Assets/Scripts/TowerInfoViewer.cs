@@ -15,6 +15,7 @@ public class TowerInfoViewer : MonoBehaviour
     [SerializeField]
     private TowerAttackRange towerAttackRange;
     private bool isInfoPanelAcitve = false;
+
     private void Awake() {
         OffTowerInfo();
     }
@@ -40,7 +41,7 @@ public class TowerInfoViewer : MonoBehaviour
     }
     public void OffTowerInfo() {
         gameObject.SetActive(false); // 타워 정보 Off
-        isInfoPanelAcitve = false;
+        isInfoPanelAcitve = false;        
     }
     private void UpdateTowerInfo() {
         // 스탯 정보 출력

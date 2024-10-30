@@ -9,6 +9,8 @@ public class ObjectDetector : MonoBehaviour
     private TowerSpawner towerSpawner;    
     [SerializeField]
     private TowerInfoViewer towerInfoViewer;
+    [SerializeField]
+    private AudioManager audioManager;
     private Camera mainCamera;
     private Ray ray;
     private RaycastHit hit;
@@ -26,9 +28,11 @@ public class ObjectDetector : MonoBehaviour
                 if(Physics.Raycast(ray, out hit, Mathf.Infinity)) {
                     if(hit.transform.CompareTag("Tile")) {
                         towerSpawner.SpawnTower(hit.transform);
+                        audioManager.ButtonPressedSound();
                     }
                     if(hit.transform.CompareTag("Tower")) {
                         towerInfoViewer.OnTowerInfo(hit.transform);
+                        audioManager.ButtonPressedSound();
                     }         
                 }  
             }

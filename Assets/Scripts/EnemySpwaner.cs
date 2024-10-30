@@ -72,6 +72,9 @@ public class EnemySpwaner : MonoBehaviour
         if(enemyList.Count == 0 && waveSystem.roundNum == 20) {
             GameManager.instance.SetGameVictory(); // 마지막 라운드 클리어시 승리
         }
+        if(enemyList.Count == 0) {
+            waveSystem.EndWave();            
+        }
     }
     private void SpawnEnemyHPSlider(GameObject enemy) {
         GameObject sliderClone = Instantiate(enemyHPSliderPrefab);

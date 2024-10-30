@@ -33,6 +33,10 @@ public class GameManager : MonoBehaviour
     private GameObject gameOverPanel;
     [SerializeField]
     private GameObject gameVictoryPanel;
+    [SerializeField]
+    private AudioManager audioManager;
+    [SerializeField]
+    private AudioSource backgroundMusic;
     private bool gameSpeedOn = false;
     void Awake() {
         if(instance == null) {
@@ -54,9 +58,13 @@ public class GameManager : MonoBehaviour
         Invoke("ShowGameVictoryPanel", 1f);
     }
     private void ShowGameOverPanel() {
+        backgroundMusic.mute = true;
+        audioManager.GameOverSound();
         gameOverPanel.SetActive(true);
     }
     private void ShowGameVictoryPanel() {
+        backgroundMusic.mute = true;
+        audioManager.GameVictorySound();
         gameVictoryPanel.SetActive(true);
     }
     // 게임 속도 조정 → 최대 2배 조정 가능(토글 형식)

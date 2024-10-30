@@ -10,10 +10,18 @@ public class WaveSystem : MonoBehaviour
     private EnemySpwaner enemySpawner;
     private int currentWaveIndex = -1;
     public int roundNum = 0;
+    private bool isPressed = false;
+    [SerializeField]
+    private AudioManager audioManager;
     public void StartWave() {
-        if(enemySpawner.EnemyList.Count == 0 && currentWaveIndex < waves.Length - 1) {
-            currentWaveIndex++;
-            enemySpawner.StartWave(waves[currentWaveIndex]);
+        if(isPressed) return;
+        if(enemySpawner.EnemyList.Count == 0 && currentWaveIndex < waves.Length - 1) {            
+            if(!isPressed) {
+                isPressed = true;
+                currentWaveIndex++;
+                audioManager.ButtonPressedSound3();
+                enemySpawner.StartWave(waves[currentWaveIndex]);              
+            }            
             if (currentWaveIndex == 0) {
                 roundNum = 1;
             }          
@@ -21,6 +29,9 @@ public class WaveSystem : MonoBehaviour
                 roundNum++;
             }            
         }
+    }
+    public void EndWave() {
+        isPressed = false;
     }  
 }
 
