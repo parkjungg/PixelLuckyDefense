@@ -55,5 +55,10 @@ public class AudioManager : MonoBehaviour
         audioSource.volume = volume;
         audioSource.Play();
     }
+    public void DamagePlayerSound() {
+        audioSource.clip = buttonClickClip[6];
+        audioSource.volume = volume;
+        audioSource.Play();
+    }
 
 }

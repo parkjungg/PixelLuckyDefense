@@ -8573,6 +8573,7 @@ MonoBehaviour:
   PlayerGold: {fileID: 359033254}
   enemyHPSliderPrefab: {fileID: 7354464800994387624, guid: a8cd7c5274dfc4d23abfd3624530cd9f, type: 3}
   canvasTransform: {fileID: 685089717}
+  audioManager: {fileID: 1571589912}
 --- !u!4 &1159383788
 Transform:
   m_ObjectHideFlags: 0
@@ -11835,6 +11836,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ec1c661d8baa37c4a9994aa31c4fb45f, type: 3}
   - {fileID: 8300000, guid: 579b9880dc8352b4ea2db078a9491049, type: 3}
   - {fileID: 8300000, guid: 48d3f2c07b32ef344932b20f340f9425, type: 3}
+  - {fileID: 8300000, guid: 02eaf256311d66242aa234863d12e286, type: 3}
   volume: 0.4
 --- !u!4 &1571589913
 Transform:

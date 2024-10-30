@@ -21,6 +21,8 @@ public class EnemySpwaner : MonoBehaviour
     private GameObject enemyHPSliderPrefab;
     [SerializeField]
     private Transform canvasTransform;
+    [SerializeField]
+    AudioManager audioManager;
 
     private void Awake() {
         enemyList = new List<Enemy>();
@@ -59,9 +61,11 @@ public class EnemySpwaner : MonoBehaviour
         if(type == EnemyDestroyType.Arrive) {            
             if(waveSystem.roundNum == 10 || waveSystem.roundNum == 20) { // 10, 20단계 일때는 보스이므로 처지 못할 시 즉시 패배 
                 playerHP.TakeDamage(20);
+                audioManager.DamagePlayerSound();
             }
             else{
                 playerHP.TakeDamage(1);
+                audioManager.DamagePlayerSound();
             }
         }
         else if(type == EnemyDestroyType.kill) {
