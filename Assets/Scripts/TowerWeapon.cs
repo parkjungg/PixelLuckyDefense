@@ -28,6 +28,7 @@ public class TowerWeapon : MonoBehaviour
     private WeaponState weaponState = WeaponState.SearchTarget; // 타워 무기의 상태
     private Transform attackTarget = null; // 공격 대상
     private EnemySpwaner enemySpawner; // 게임에 존재하는 적 정보 획득하기 위한 선언
+    private AudioSource audioSource;
     private Tile ownerTile;
     [SerializeField]
     private Gold playerGold;
@@ -40,7 +41,10 @@ public class TowerWeapon : MonoBehaviour
     public float Rate => attackRate;
     public float Range => attackRange;
     public int SellGold => sellGold;
-    public Sprite TowerImage => towerImage;    
+    public Sprite TowerImage => towerImage;  
+    private void Awake() {
+        audioSource = GetComponent<AudioSource>();
+    }  
     public void Setup(EnemySpwaner enemySpwaner,Gold playerGold, Tile ownerTile) {
         this.enemySpawner = enemySpwaner;
         this.playerGold = playerGold;
@@ -87,6 +91,7 @@ public class TowerWeapon : MonoBehaviour
                 break;
             }
             anim.SetTrigger("2_Attack");
+            audioSource.Play();
             yield return new WaitForSeconds(0.22f); // 애니메이션 싱크를 위한 지연
             yield return new WaitForSeconds(attackRate);   
 

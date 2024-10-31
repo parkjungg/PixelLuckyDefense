@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioClip[] buttonClickClip;
     [Range(0f, 1f)]
-    public float volume = 0.4f;
+    public float volume = 0.4f; // 기본 사운드 볼륨
 
     private void Awake() {
         // AudioSource가 없으면 추가
@@ -55,10 +55,9 @@ public class AudioManager : MonoBehaviour
         audioSource.volume = volume;
         audioSource.Play();
     }
-    public void DamagePlayerSound() {
+    public void DamagePlayerSound() { // 플레이어 체력이 닳을 때
         audioSource.clip = buttonClickClip[6];
         audioSource.volume = volume;
         audioSource.Play();
     }
-
 }

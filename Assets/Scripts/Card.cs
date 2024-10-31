@@ -94,6 +94,7 @@ public class Card : MonoBehaviour
         else if (randomIndex == 14) cardIndex = 7;
         else cardIndex = 8;
     }
+    // 카드의 족보 이름 출력 함수
     private void CheckCard() {
         if(cardIndex == 0) cardName = "Common";
         else if(cardIndex == 1) cardName = "Rare";

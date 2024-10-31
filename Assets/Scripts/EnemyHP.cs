@@ -26,7 +26,6 @@ public class EnemyHP : MonoBehaviour
         if(isDie == true) return;
 
         currentHP -= damage;
-
         if(currentHP <= 0) {
             isDie = true;
             anim.SetBool("isDeath", true);
