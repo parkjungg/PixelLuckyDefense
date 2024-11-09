@@ -4900,7 +4900,7 @@ MonoBehaviour:
   attackDamage: 10
   attackRange: 2
   attackRate: 0.5
-  sellGold: 10
+  sellGold: 7
   weaponPrefab: {fileID: 1311821279667461231, guid: e300fd5854cc04c3484caec42464ddd1, type: 3}
   spawnPoint: {fileID: 9179522087499102173}
   playerGold: {fileID: 0}
