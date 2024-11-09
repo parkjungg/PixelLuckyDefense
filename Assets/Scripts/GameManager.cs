@@ -38,10 +38,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private AudioSource backgroundMusic;
     private bool gameSpeedOn = false;
+    public float gameSpeed = 1;
     void Awake() {
         if(instance == null) {
             instance = this;
         }
+        gameSpeed = 1;
+        Time.timeScale = 1;
     }
     
     private void Update() {
@@ -71,11 +74,13 @@ public class GameManager : MonoBehaviour
     public void SetGameSpeed() {
         if(!gameSpeedOn) {
             Time.timeScale = 2;
+            gameSpeed = 2;
             gameSpeedOn = true;
             speedText.text = "x2";
         }
         else {
             Time.timeScale = 1;
+            gameSpeed = 1;
             gameSpeedOn = false;
             speedText.text = "x1";
         }        
