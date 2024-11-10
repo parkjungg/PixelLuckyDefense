@@ -1438,8 +1438,6 @@ GameObject:
   m_Component:
   - component: {fileID: 115672838420225845}
   - component: {fileID: 3339677485333467316}
-  - component: {fileID: -967687500644924500}
-  - component: {fileID: -7881606239932636205}
   m_Layer: 5
   m_Name: SPUM_20240911224646095
   m_TagString: Untagged
@@ -4540,33 +4538,6 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 95bc898d1e9bdc0428109504a3fa80a0, type: 2}
   - {fileID: 7400000, guid: 4fe865043f99d8d488336f5c75256b8f, type: 2}
   - {fileID: 7400000, guid: b5b99dfcf045f484fbc5959057ff85b3, type: 2}
---- !u!114 &-967687500644924500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507254905122018278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0021dfc0bb045fbbcdddd215e1bccb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHp: 0
---- !u!114 &-7881606239932636205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507254905122018278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aff43886244b4a49b0538769fb806e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  moveDirection: {x: 0, y: 0, z: 0}
 --- !u!1 &1628942796239019658
 GameObject:
   m_ObjectHideFlags: 0

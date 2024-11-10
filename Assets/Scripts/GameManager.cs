@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         if(instance == null) {
             instance = this;
         }
+        Application.targetFrameRate = 60;
         gameSpeed = 1;
         Time.timeScale = 1;
     }

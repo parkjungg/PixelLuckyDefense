@@ -23,4 +23,7 @@ public class GameStart : MonoBehaviour
     public void TurnOffCanvas2() {
         canvas2.SetActive(false);        
     }
+    public void GameQuit() {
+        Application.Quit();
+    }
 }

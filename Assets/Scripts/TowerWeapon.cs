@@ -29,6 +29,7 @@ public class TowerWeapon : MonoBehaviour
     private Transform attackTarget = null; // 공격 대상
     private EnemySpwaner enemySpawner; // 게임에 존재하는 적 정보 획득하기 위한 선언
     private AudioSource audioSource;
+    public float volume = 0.3f;
     private Tile ownerTile;
     [SerializeField]
     private Gold playerGold;
@@ -91,6 +92,7 @@ public class TowerWeapon : MonoBehaviour
                 break;
             }
             anim.SetTrigger("2_Attack");
+            audioSource.volume = volume;
             audioSource.Play();
             yield return new WaitForSeconds(0.22f); // 애니메이션 싱크를 위한 지연
             yield return new WaitForSeconds(attackRate);   
