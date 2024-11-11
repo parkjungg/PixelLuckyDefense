@@ -1,5 +1,4 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 
 public class EnemyHP : MonoBehaviour
@@ -28,15 +27,14 @@ public class EnemyHP : MonoBehaviour
         currentHP -= damage;
         if(currentHP <= 0) {
             isDie = true;
-            anim.SetBool("isDeath", true);
-            anim.SetTrigger("4_Death");
+            // anim.SetBool("isDeath", true);
+            // anim.SetTrigger("4_Death");
             movement2D.StopMoving();
             StartCoroutine("DelayedOnDie");
         }
     } 
     private IEnumerator DelayedOnDie() {
-        yield return new WaitForSeconds(1f);
-        enemy.OnDie(EnemyDestroyType.kill);
-        
+        yield return null;
+        enemy.OnDie(EnemyDestroyType.kill);        
     }
 }

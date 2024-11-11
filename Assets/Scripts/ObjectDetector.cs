@@ -25,7 +25,7 @@ public class ObjectDetector : MonoBehaviour
                 ray = mainCamera.ScreenPointToRay(Input.mousePosition);
                 
                 if(Physics.Raycast(ray, out hit, Mathf.Infinity)) {
-                    if(hit.transform.CompareTag("Tile")) {
+                    if(hit.transform.CompareTag("Tile") && !towerSpawner.isPanelOn) {
                         towerSpawner.SpawnTower(hit.transform);
                         audioManager.ButtonPressedSound();
                     }

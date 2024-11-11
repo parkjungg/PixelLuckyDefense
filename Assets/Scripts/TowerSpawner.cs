@@ -24,6 +24,7 @@ public class TowerSpawner : MonoBehaviour
     private EnemySpwaner enemySpwaner;
     private CanvasGroup selectCardPanelCanvasGroup;
     public int cardIndex;
+    public bool isPanelOn = false;
 
     private void Awake() {
         selectCardPanelCanvasGroup = selectCardPanel.GetComponent<CanvasGroup>();
@@ -39,7 +40,8 @@ public class TowerSpawner : MonoBehaviour
         } // 타워를 건설할 만큼의 골드가 없다면 건설을 못하게 함
         this.tileTransform = tileTransform;   
         tile.isBuildTower = true;
-        ShowCardPanel();             
+        ShowCardPanel();
+        isPanelOn = true;            
     }
     public void ShowCardPanel() { 
         selectCardPanel.SetActive(true);
@@ -81,6 +83,7 @@ public class TowerSpawner : MonoBehaviour
         }
         if(card.isFlipped) {
             StartCoroutine("FadeOutPanel");
+            isPanelOn = false;
             playerGold.CurrentGold -= towerBuildGold; // 타워 건설에 필요한 골드만큼 감소
         }
        
