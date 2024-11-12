@@ -10,8 +10,6 @@ public class TowerSpawner : MonoBehaviour
     [SerializeField]
     private GameObject selectCardPanel;
     [SerializeField]
-    private GameObject clickBlocker;
-    [SerializeField]
     private GameObject[] towerPrefab;
     [SerializeField]
     private int towerBuildGold = 10; // 타워 건설에 필요한 골드
@@ -45,7 +43,6 @@ public class TowerSpawner : MonoBehaviour
     }
     public void ShowCardPanel() { 
         selectCardPanel.SetActive(true);
-        clickBlocker.SetActive(true);
         StartCoroutine("FadeInPanel");
     }
     private IEnumerator FadeInPanel() { // 패널 등장 애니메이션
@@ -71,7 +68,6 @@ public class TowerSpawner : MonoBehaviour
         }
         selectCardPanelCanvasGroup.alpha = 0f;
         selectCardPanel.SetActive(false);
-        clickBlocker.SetActive(false);
         ResetCards(); // 카드 조합을 선택하고 카드들을 초기화해서 다음번에 완전히 새로운 카드들이 되도록 함
     }
     public void CloseCardPanel() {

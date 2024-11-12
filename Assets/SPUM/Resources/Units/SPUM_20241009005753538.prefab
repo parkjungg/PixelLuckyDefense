@@ -8741,8 +8741,9 @@ MonoBehaviour:
   attackRange: 2
   attackRate: 0.5
   sellGold: 500
-  weaponPrefab: {fileID: 1311821279667461231, guid: e300fd5854cc04c3484caec42464ddd1, type: 3}
+  weaponPrefab: {fileID: 7608335880349284102, guid: d015040e821384304b1dcc17f4b99495, type: 3}
   spawnPoint: {fileID: 6689094425768952924}
+  volume: 0.3
   playerGold: {fileID: 0}
   anim: {fileID: 8491346800930632631}
   towerImage: {fileID: 21300000, guid: acfd5b28896bf44159f0c64d65724c0a, type: 3}
@@ -9619,7 +9620,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 19
-  m_Sprite: {fileID: 21300000, guid: ffef52aa2bdb04c1394af5d4599ed210, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d146494dac5544c8bbfd426f29a9110, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

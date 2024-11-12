@@ -7607,8 +7607,9 @@ MonoBehaviour:
   attackRange: 2
   attackRate: 0.5
   sellGold: 80
-  weaponPrefab: {fileID: 1311821279667461231, guid: e300fd5854cc04c3484caec42464ddd1, type: 3}
+  weaponPrefab: {fileID: 797174882762572976, guid: eb11856d32d2640f2bff364b2e604c05, type: 3}
   spawnPoint: {fileID: 5193734026034930894}
+  volume: 0.3
   playerGold: {fileID: 0}
   anim: {fileID: 7039179604782508019}
   towerImage: {fileID: 21300000, guid: afb4efb8ee05846959772689caa9cd48, type: 3}
