@@ -8480,7 +8480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 5
-  attackRange: 4
+  attackRange: 5
   attackRate: 0.5
   sellGold: 7
   weaponPrefab: {fileID: 3491819753160080295, guid: db59ed661103e4c72a8d244153415511, type: 3}

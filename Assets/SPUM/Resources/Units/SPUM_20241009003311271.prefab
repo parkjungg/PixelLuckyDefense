@@ -4323,8 +4323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 559e3681f09dc451487344e6bbcd95ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 4
-  attackRange: 4
+  attackDamage: 5
+  attackRange: 5
   attackRate: 0.5
   sellGold: 7
   weaponPrefab: {fileID: 3512893008294613927, guid: 08f1ebd661dbf4621b351c715b577312, type: 3}

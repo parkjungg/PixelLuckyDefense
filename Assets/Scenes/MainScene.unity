@@ -3996,7 +3996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f690548dedb1d4b3ea8874f3a4b7684c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentGold: 50
+  currentGold: 30
 --- !u!114 &359033255
 MonoBehaviour:
   m_ObjectHideFlags: 0
