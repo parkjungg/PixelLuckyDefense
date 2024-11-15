@@ -13104,7 +13104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0021dfc0bb045fbbcdddd215e1bccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 10
+  gold: 8
 --- !u!114 &1999859969972449431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13117,7 +13117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9a7c081539b4351a4e09c7249403d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
+  maxHP: 7500
   anim: {fileID: 3964880029961887317}
 --- !u!114 &9014576333108492837
 MonoBehaviour:

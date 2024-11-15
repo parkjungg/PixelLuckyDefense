@@ -64,11 +64,13 @@ public class GameManager : MonoBehaviour
         backgroundMusic.mute = true;
         audioManager.GameOverSound();
         gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
     }
     private void ShowGameVictoryPanel() {
         backgroundMusic.mute = true;
         audioManager.GameVictorySound();
         gameVictoryPanel.SetActive(true);
+        Time.timeScale = 0;
     }
     // 게임 속도 조정 → 최대 2배 조정 가능(토글 형식)
     public void SetGameSpeed() {

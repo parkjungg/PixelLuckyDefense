@@ -29,7 +29,7 @@ public class TowerWeapon : MonoBehaviour
     private Transform attackTarget = null; // 공격 대상
     private EnemySpwaner enemySpawner; // 게임에 존재하는 적 정보 획득하기 위한 선언
     private AudioSource audioSource;
-    public float volume = 0.3f;
+    public float volume = 0.15f;
     private Tile ownerTile;
     [SerializeField]
     private Gold playerGold;

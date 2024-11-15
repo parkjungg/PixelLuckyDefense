@@ -6709,7 +6709,7 @@ MonoBehaviour:
   sellGold: 5
   weaponPrefab: {fileID: 4131530579340637521, guid: 76267e620c43b47ae8dba3914791c702, type: 3}
   spawnPoint: {fileID: 4479423854930721201}
-  volume: 0.3
+  volume: 0.15
   playerGold: {fileID: 0}
   anim: {fileID: 6670794361477491860}
   towerImage: {fileID: 21300000, guid: 6589b5adae86b4674ad03620696e239d, type: 3}
