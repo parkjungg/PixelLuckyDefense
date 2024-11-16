@@ -4874,7 +4874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9a7c081539b4351a4e09c7249403d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 13000
+  maxHP: 50000
   anim: {fileID: 156617210277274334}
 --- !u!61 &9207442954777473575
 BoxCollider2D:

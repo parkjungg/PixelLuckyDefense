@@ -19,11 +19,11 @@ public class TowerManager : MonoBehaviour
             upgradeCount++;
         }
         else if(upgradeCount < 20) {
-            TowerWeapon.upgradeBonus += upgradeAmount + 6;
+            TowerWeapon.upgradeBonus += upgradeAmount + 4;
             upgradeCount++;
         }
         else {
-            TowerWeapon.upgradeBonus += upgradeAmount + 10;
+            TowerWeapon.upgradeBonus += upgradeAmount + 6;
         }        
         
         playerGold.CurrentGold -= upgradeGold;

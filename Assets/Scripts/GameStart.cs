@@ -6,9 +6,11 @@ public class GameStart : MonoBehaviour
     public GameObject canvas1;
     public GameObject canvas2;
     public void StartGame() {
+        TowerWeapon.upgradeBonus = 0;
         SceneManager.LoadScene("MainScene");
     }
     public void ReturnToMain() {
+        TowerWeapon.upgradeBonus = 0;
         SceneManager.LoadScene("HomeScene");
     }
     public void TurnOnCanvas1() {

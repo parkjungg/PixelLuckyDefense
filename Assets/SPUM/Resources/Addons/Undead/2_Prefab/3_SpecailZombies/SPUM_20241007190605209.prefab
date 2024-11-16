@@ -14443,7 +14443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9a7c081539b4351a4e09c7249403d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 2500
+  maxHP: 5000
   anim: {fileID: 1145863238381564915}
 --- !u!114 &111008701297751398
 MonoBehaviour:

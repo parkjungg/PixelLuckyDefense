@@ -15,10 +15,14 @@ public class EnemyHP : MonoBehaviour
     [SerializeField]
     Animator anim;
 
+    private const float autoDeathTime = 52f;
     private void Awake() {
         currentHP = maxHP; // 적의 현재 체력을 기본 체력으로 설정
         enemy = GetComponent<Enemy>();
         movement2D = GetComponent<Movement2D>();
+    }
+    private void Start() {
+        StartCoroutine("AutoDeathTimer");
     }
 
     public void TakeDamage(float damage) {
@@ -36,5 +40,12 @@ public class EnemyHP : MonoBehaviour
     private IEnumerator DelayedOnDie() {
         yield return null;
         enemy.OnDie(EnemyDestroyType.kill);        
+    }
+    // 새어나가는 몹 자동 죽음
+    private IEnumerator AutoDeathTimer() {
+        yield return new WaitForSeconds(autoDeathTime);
+        if(!isDie) {
+            enemy.OnDie(EnemyDestroyType.kill);  
+        }
     }
 }

@@ -7,13 +7,11 @@ public class Weapon : MonoBehaviour
     private Movement2D movement2D;
     private Transform target;
     private float damage;
-    //private AudioSource audioSource;
 
     public void Setup(Transform target, float damage) {
         movement2D = GetComponent<Movement2D>();
         this.target = target;
         this.damage = damage;
-        //audioSource = GetComponent<AudioSource>();
     }
     private void Update() {
         if(target != null) {
@@ -28,9 +26,6 @@ public class Weapon : MonoBehaviour
         if(!collision.CompareTag("Enemy")) return;
         if(collision.transform != target) return;
         collision.GetComponent<EnemyHP>().TakeDamage(damage); // 적 체력을 damage만큼 감소
-        // if(audioSource != null) {
-        //     audioSource.Play();
-        // }
         Destroy(gameObject);
     }
 }
