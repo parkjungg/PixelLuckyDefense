@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
         }
         gameSpeed = 1;
         Time.timeScale = 1;
+        Application.targetFrameRate = 60;
     }
     
     private void Update() {

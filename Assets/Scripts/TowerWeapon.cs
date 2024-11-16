@@ -94,7 +94,7 @@ public class TowerWeapon : MonoBehaviour
             anim.SetTrigger("2_Attack");
             audioSource.volume = volume;
             audioSource.Play();
-            yield return new WaitForSeconds(0.22f); // 애니메이션 싱크를 위한 지연
+            yield return new WaitForSeconds(0.05f); // 애니메이션 싱크를 위한 지연
             yield return new WaitForSeconds(attackRate);   
 
             Attack();        
