@@ -6890,7 +6890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9a7c081539b4351a4e09c7249403d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 32000
+  maxHP: 28000
   anim: {fileID: 7501470014499233303}
 --- !u!114 &217558493055706896
 MonoBehaviour:
